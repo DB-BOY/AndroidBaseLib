@@ -1,13 +1,16 @@
 package cn.dbboy.androidbase;
 
-import android.os.Bundle;
-import android.support.v7.app.AppCompatActivity;
+import cn.dbboy.generallib.ui.BaseActivity;
 
-public class MainActivity extends AppCompatActivity {
+public class MainActivity extends BaseActivity {
+    @Override
+    protected void initView() {
+
+    }
 
     @Override
-    protected void onCreate(Bundle savedInstanceState) {
-        super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_main);
+    protected int getLayoutId() {
+        return R.layout.activity_main;
     }
+    
 }

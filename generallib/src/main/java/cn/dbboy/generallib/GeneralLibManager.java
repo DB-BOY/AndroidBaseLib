@@ -39,6 +39,9 @@ public class GeneralLibManager {
     }
 
     public Context getContext() {
+        if (context == null) {
+            throw new IllegalArgumentException("Context can not be null, initialize it in GeneralManager.");
+        }
         return context;
     }
 

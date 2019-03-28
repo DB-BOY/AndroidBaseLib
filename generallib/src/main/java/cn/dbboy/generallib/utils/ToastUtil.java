@@ -40,9 +40,6 @@ public class ToastUtil {
 
     private static void initToast() {
         Context context = GeneralLibManager.getInstance().getContext();
-        if (context == null) {
-            throw new IllegalArgumentException("Context can not be null, initialize it in GeneralManager.");
-        }
         if (toast == null) {
             toast = new Toast(context);
             toast.setGravity(Gravity.CENTER, 0, 0);

@@ -6,6 +6,11 @@ import android.support.v7.app.AppCompatActivity;
 
 /**
  * Created by DB_BOY on 2019/3/27.
+ *
+ * 基础Activity封装，不涉及到mvp的实现</br>
+ * 如果用到mvp
+ * @see BaseViewActivity
+ *
  */
 public abstract class BaseActivity extends AppCompatActivity {
     @Override
@@ -16,17 +21,20 @@ public abstract class BaseActivity extends AppCompatActivity {
         initView();
         afterView();
     }
-
     /**
      * view后操作，初始化数据等，一般用到view的操作
      */
-    protected abstract void afterView();
+    protected void afterView() {
+        
+    }
 
     /**
-     * view前操作，初始化数据
+     * view前操作，初始化数据,presenter
      */
-    protected abstract void beforeView();
+    protected void beforeView() {
 
+    }
+    
     /**
      * 初始化控件
      */
